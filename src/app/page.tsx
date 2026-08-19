@@ -1,29 +1,12 @@
 import Link from "next/link";
+import { Hero } from "@/components/Hero";
 import { company } from "@/data/company";
 import { news, stories } from "@/data/site";
 
 export default function HomePage() {
   return (
     <>
-      <section className="hero">
-        <div className="wrap">
-          <p className="kicker">Aurevia in 2026</p>
-          <h1>Building sustainable, innovation-driven growth</h1>
-          <p>
-            Long-term value creation for patients — from specialty urology and neuroscience to
-            accessible generics and wellness care.
-          </p>
-          <div className="hero-actions">
-            <Link className="btn btn-primary" href="/news/pivot-to-growth">
-              View the latest update
-            </Link>
-            <Link className="btn btn-ghost" href="/our-company">
-              Get to know Aurevia
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      <Hero />
       <section className="tri">
         <Link href="/our-company">
           <h2>We Are All In for Better Health</h2>
