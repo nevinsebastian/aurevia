@@ -7,6 +7,7 @@ export const company = {
   phone: "+91 99959 99000",
   phoneRaw: "919995999000",
   whatsapp: "919995999000",
+  inboxEmail: process.env.NEXT_PUBLIC_INBOX_EMAIL ?? "mail@aurevialifesciences.org",
 };
 
 export function waLink(text?: string) {

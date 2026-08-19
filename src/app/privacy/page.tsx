@@ -10,8 +10,8 @@ export default function PrivacyPage() {
         <h1>Data Privacy</h1>
         <p>
           {company.name} uses this website to publish company, science and news information.
-          Enquiries are made by phone or WhatsApp at {company.phone}. We do not collect form data on
-          this website.
+          You can enquire by phone, WhatsApp, or the contact form. Form submissions are sent to our
+          inbox so we can reply. We do not sell personal information.
         </p>
         <p>
           If you call or message us, we use those details only to respond. We do not sell personal

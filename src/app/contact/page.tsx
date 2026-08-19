@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { EnquiryForm } from "@/components/EnquiryForm";
 import { company, telLink, waLink } from "@/data/company";
 
 export const metadata: Metadata = { title: "Contact Us" };
@@ -42,6 +43,15 @@ export default function ContactPage() {
               <p className="muted">{text}</p>
             </a>
           ))}
+        </div>
+        <div className="enquiry-wrap">
+          <p className="kicker">Send an enquiry</p>
+          <h2>Email us from this page</h2>
+          <p className="muted" style={{ margin: "8px 0 18px", maxWidth: "52ch" }}>
+            Enter your email and message. It is delivered to our inbox. Call or WhatsApp if you
+            prefer.
+          </p>
+          <EnquiryForm />
         </div>
       </div>
     </section>
