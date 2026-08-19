@@ -5,10 +5,8 @@ export default function NotFound() {
     <section className="section">
       <div className="wrap">
         <h1>Page not found</h1>
-        <p className="muted" style={{ margin: "8px 0 20px" }}>
-          The page you are looking for is not in the Aurevia portfolio.
-        </p>
-        <Link className="btn btn-green" href="/">
+        <p className="lead">The page you requested is not on the Aurevia website.</p>
+        <Link className="btn btn-primary" href="/" style={{ marginTop: 20 }}>
           Back home
         </Link>
       </div>

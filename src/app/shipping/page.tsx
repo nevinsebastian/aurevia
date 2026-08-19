@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
-import { company } from "@/data/company";
+import { company, telLink } from "@/data/company";
 
-export const metadata: Metadata = { title: "Shipping & Delivery" };
+export const metadata: Metadata = { title: "Supply & Access" };
 
 export default function ShippingPage() {
   return (
     <section className="section">
       <div className="wrap article">
-        <h1>Shipping & Delivery</h1>
+        <h1>Supply & Access</h1>
         <p>
-          {company.name} is a marketing organisation. Consumer deliveries, where available, are
-          fulfilled by the marketplace or authorised retailer handling the order.
+          {company.name} is a biopharmaceutical organisation. Patient access is through healthcare
+          professionals, authorised channels and partners — not through an online shop on this site.
         </p>
         <p>
-          Professional and distributor shipments are arranged case by case. Ask our team about
-          current lead times for a named pack.
+          Professional and distribution enquiries: call <a href={telLink()}>{company.phone}</a>.
         </p>
       </div>
     </section>

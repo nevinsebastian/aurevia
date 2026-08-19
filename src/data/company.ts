@@ -2,11 +2,8 @@ export const company = {
   name: "Aurevia Life Sciences",
   shortName: "Aurevia",
   legalName: "Aurevia Life Sciences",
+  purpose: "We are all in for better health.",
   tagline: "Innovation • Health • A Better Tomorrow",
-  heroEyebrow: "Healthcare & Wellness",
-  heroTitle: "Trusted Healthcare and Wellness Solutions",
-  heroLead:
-    "Discover practical nutraceutical, nutritional, Ayurvedic and urology-focused wellness products from a professionally driven healthcare marketing organisation.",
   phone: "+91 99959 99000",
   phoneRaw: "919995999000",
   whatsapp: "919995999000",
@@ -14,7 +11,7 @@ export const company = {
 
 export function waLink(text?: string) {
   const message =
-    text ?? `Hello ${company.shortName}, I would like to enquire about your products.`;
+    text ?? `Hello ${company.shortName}, I would like to learn more about Aurevia Life Sciences.`;
   return `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
@@ -22,31 +19,42 @@ export function telLink() {
   return `tel:+${company.phoneRaw}`;
 }
 
-export const nav = [
-  { href: "/products", label: "Products" },
-  { href: "/categories", label: "Categories" },
-  { href: "/new-products", label: "New Products" },
-  { href: "/about", label: "About Us" },
-  { href: "/where-to-buy", label: "Where to Buy" },
-  { href: "/contact", label: "Contact" },
-  { href: "/health-insights", label: "Health Insights" },
-];
+type NavItem = {
+  href: string;
+  label: string;
+  children?: { href: string; label: string }[];
+};
 
-export const whyPoints = [
+export const nav: NavItem[] = [
   {
-    title: "Practical Product Portfolio",
-    text: "A relevant range shaped around everyday nutrition, wellness and urology care needs.",
+    href: "/our-company",
+    label: "Our Company",
+    children: [
+      { href: "/our-company", label: "Who We Are" },
+      { href: "/our-company/purpose", label: "Our Purpose" },
+      { href: "/sustainability", label: "Sustainability & Impact" },
+    ],
   },
   {
-    title: "Responsible Communication",
-    text: "Clear product information designed to be read with current labels and professional advice.",
+    href: "/science",
+    label: "Science",
+    children: [
+      { href: "/science", label: "Research & Development" },
+      { href: "/science/pipeline", label: "R&D Pipeline" },
+      { href: "/science/therapeutic-areas", label: "Therapeutic Areas" },
+      { href: "/science/clinical-trials", label: "Clinical Trials" },
+    ],
   },
   {
-    title: "Reliable Partner Network",
-    text: "Working through established professional, retail and marketplace relationships.",
+    href: "/solutions",
+    label: "Our Solutions",
+    children: [
+      { href: "/solutions", label: "How We Serve Patients" },
+      { href: "/science/therapeutic-areas", label: "Urology & Specialty Care" },
+    ],
   },
-  {
-    title: "Selected Purchase Paths",
-    text: "Marketplace links lead to selected storefront and marketer pages.",
-  },
+  { href: "/patients", label: "Patients" },
+  { href: "/news", label: "News" },
+  { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact Us" },
 ];
