@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { company } from "@/data/company";
@@ -50,8 +51,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/media/lab.jpg" alt="Aurevia research and operations" />
+            <Image src="/media/lab.jpg" alt="Aurevia research and operations" width={720} height={480} />
           </div>
         </div>
       </section>
@@ -81,8 +81,7 @@ export default function HomePage() {
       <section className="section">
         <div className="wrap split">
           <div className="media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/media/research.jpg" alt="Neuroscience and specialty research" />
+            <Image src="/media/research.jpg" alt="Neuroscience and specialty research" width={720} height={480} />
           </div>
           <div>
             <p className="kicker">Specialty care</p>
@@ -98,10 +97,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section purple">
+      <section className="section navy">
         <div className="wrap split">
           <div>
-            <p className="kicker" style={{ color: "#d7c6ee" }}>Stepping Up Innovation</p>
+            <p className="kicker">Stepping Up Innovation</p>
             <h2>Innovation for patients is at the heart of what we do</h2>
             <p>
               From in-house innovation to strategic partnerships, we persist in creating innovative
@@ -112,7 +111,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div>
-            <p className="kicker" style={{ color: "#d7c6ee" }}>Press Releases</p>
+            <p className="kicker">Press Releases</p>
             <div className="news-row">
               {news.slice(0, 3).map((item) => (
                 <Link key={item.slug} href={`/news/${item.slug}`}>
@@ -170,15 +169,14 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/media/team.jpg" alt="Aurevia colleagues" />
+            <Image src="/media/team.jpg" alt="Aurevia colleagues" width={720} height={480} />
           </div>
         </div>
       </section>
 
-      <section className="section purple">
+      <section className="section navy">
         <div className="wrap">
-          <p className="kicker" style={{ color: "#d7c6ee" }}>Our Purpose</p>
+          <p className="kicker">Our Purpose</p>
           <h2>{company.purpose}</h2>
           <p>Our colleagues embody this purpose in their work every day.</p>
           <Link className="btn btn-ghost" href="/our-company/purpose" style={{ marginTop: 20 }}>

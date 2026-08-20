@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = { title: "Research & Development" };
@@ -30,8 +31,7 @@ export default function SciencePage() {
             </p>
           </div>
           <div className="media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/media/science.jpg" alt="Aurevia laboratory science" />
+            <Image src="/media/science.jpg" alt="Aurevia laboratory science" width={720} height={480} />
           </div>
         </div>
         <div className="wrap grid-3" style={{ marginTop: 40 }}>

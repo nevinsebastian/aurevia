@@ -24,8 +24,8 @@ export function EnquiryForm() {
 
     const inbox = company.inboxEmail.trim();
     const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_KEY?.trim();
-    if (!web3Key && (!inbox || inbox.includes("changeme@"))) {
-      setError("Set your inbox email in src/data/company.ts (inboxEmail) or NEXT_PUBLIC_INBOX_EMAIL.");
+    if (!web3Key && !inbox) {
+      setError("Unable to send right now. Please try again later.");
       setStatus("error");
       return;
     }

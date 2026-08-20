@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { company } from "@/data/company";
 import { values } from "@/data/site";
@@ -42,8 +43,7 @@ export default function CompanyPage() {
             </p>
           </div>
           <div className="media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/media/team.jpg" alt="Aurevia colleagues" />
+            <Image src="/media/team.jpg" alt="Aurevia colleagues" width={720} height={480} />
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = { title: "Careers" };
@@ -24,8 +25,7 @@ export default function CareersPage() {
           </Link>
         </div>
         <div className="media">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/media/team.jpg" alt="Aurevia team" />
+          <Image src="/media/team.jpg" alt="Aurevia team" width={720} height={480} />
         </div>
       </div>
     </section>

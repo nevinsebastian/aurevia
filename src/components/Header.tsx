@@ -53,8 +53,14 @@ export function Header() {
     <header className="site-header">
       <div className="header-bar wrap">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <Image src="/logo.png" alt="Aurevia Life Sciences" width={44} height={44} priority />
-          <span className="wordmark">aurevia</span>
+          <Image
+            src="/logo.png"
+            alt="Aurevia Life Sciences"
+            width={180}
+            height={120}
+            className="brand-logo"
+            priority
+          />
         </Link>
 
         <nav className="desk-nav" aria-label="Primary">
@@ -197,11 +203,8 @@ export function Footer() {
       <div className="wrap footer-grid">
         <div>
           <div className="footer-brand">
-            <Image src="/logo.png" alt="" width={56} height={56} />
-            <div>
-              <h4>{company.name}</h4>
-              <p>{company.purpose}</p>
-            </div>
+            <Image src="/logo.png" alt={company.name} width={200} height={133} className="footer-logo" />
+            <p>{company.purpose}</p>
           </div>
         </div>
         <div>

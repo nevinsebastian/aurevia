@@ -43,7 +43,7 @@ export function Hero() {
   const slide = slides[i];
 
   return (
-    <section className="teva-hero">
+    <section className="site-hero">
       <Molecules />
       <div className="hero-disc">
         <h1>{slide.title}</h1>

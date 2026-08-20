@@ -10,7 +10,7 @@
   --paper: #ffffff;
   --mist: #f4f7f6;
   --footer: #10243d;
-  --header: 84px;
+  --header: 92px;
   --max: 1240px;
   --fs-body: 1rem;
   --fs-lead: 1.125rem;
@@ -55,22 +55,12 @@ body.menu-lock { overflow: hidden; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
   flex-shrink: 0;
 }
-.brand img {
-  width: 44px;
-  height: 44px;
+.brand-logo {
+  width: auto;
+  height: 56px;
   object-fit: contain;
-  background: #000;
-  border-radius: 8px;
-}
-.wordmark {
-  font-weight: 800;
-  font-size: 1.35rem;
-  letter-spacing: -0.04em;
-  color: var(--green);
-  text-transform: lowercase;
 }
 .desk-nav {
   display: flex;
@@ -262,7 +252,7 @@ body.menu-lock { overflow: hidden; }
   cursor: pointer;
 }
 
-.teva-hero {
+.site-hero {
   position: relative;
   min-height: min(78vh, 720px);
   overflow: hidden;
@@ -419,11 +409,13 @@ body.menu-lock { overflow: hidden; }
 
 .section { padding: 72px 0; }
 .section.mist { background: var(--mist); }
-.section.purple { background: var(--navy); color: #fff; }
-.section.purple h2 { color: #fff; }
-.section.purple p,
-.section.purple .muted { color: rgba(255,255,255,0.85); }
-.section.purple .kicker { color: #9ad4b5; }
+.section.navy { background: var(--navy); color: #fff; }
+.section.navy h2,
+.section.navy h3 { color: #fff; }
+.section.navy p,
+.section.navy .muted { color: rgba(255,255,255,0.85); }
+.section.navy .kicker { color: #9ad4b5; }
+.section.navy time { color: rgba(255,255,255,0.7); }
 
 .kicker {
   color: var(--green-d);
@@ -549,12 +541,19 @@ h3 { font-size: var(--fs-h3); }
 }
 .site-footer ul { list-style: none; display: grid; gap: 8px; }
 .site-footer a:hover { color: #fff; }
-.footer-brand { display: flex; gap: 12px; align-items: flex-start; }
-.footer-brand img {
-  width: 56px;
-  height: 56px;
-  background: #000;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+.footer-logo {
+  width: auto;
+  height: 88px;
+  object-fit: contain;
+  background: #fff;
   border-radius: 8px;
+  padding: 6px;
 }
 .footer-brand p { color: #c5d0dc; }
 .legal {
@@ -647,8 +646,8 @@ h3 { font-size: var(--fs-h3); }
   .tri, .grid-3, .grid-4, .grid-2, .footer-grid, .split, .contact-layout {
     grid-template-columns: 1fr;
   }
-  .wordmark { font-size: 1.15rem; }
-  .teva-hero { min-height: auto; }
+  .brand-logo { height: 48px; }
+  .site-hero { min-height: auto; }
   .hero-controls { flex-wrap: wrap; }
   .enquiry-wrap { max-width: none; }
 }
