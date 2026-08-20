@@ -5,12 +5,6 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    title: "Aurevia in Q2 2026",
-    text: "Building sustainable, innovation-driven growth and long-term value creation",
-    href: "/news/pivot-to-growth",
-    cta: "View the press release",
-  },
-  {
     title: "We are all in for better health",
     text: "Aurevia Life Sciences is an innovative biopharmaceutical company, enabled by a world-class generics business.",
     href: "/our-company",
