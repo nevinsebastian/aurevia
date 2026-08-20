@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { company, telLink, waLink } from "@/data/company";
+import Link from "next/link";
 
 export const metadata: Metadata = { title: "Clinical Trials" };
 
@@ -28,14 +28,9 @@ export default function TrialsPage() {
           Before enrolment, the investigator explains purpose, potential benefits and risks, and
           alternative options. Participants are monitored throughout.
         </p>
-        <div className="hero-actions" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap" }}>
-          <a className="btn btn-primary" href={telLink()}>
-            Call {company.phone}
-          </a>
-          <a className="btn btn-ghost-dark" href={waLink("Hello Aurevia, I would like information about clinical trials.")} target="_blank" rel="noreferrer">
-            WhatsApp enquiry
-          </a>
-        </div>
+        <Link className="btn btn-primary" href="/contact" style={{ marginTop: 24 }}>
+          Contact us about trials
+        </Link>
       </div>
     </section>
   );

@@ -4,21 +4,34 @@ export const company = {
   legalName: "Aurevia Life Sciences",
   purpose: "We are all in for better health.",
   tagline: "Innovation • Health • A Better Tomorrow",
-  phone: "+91 99959 99000",
-  phoneRaw: "919995999000",
-  whatsapp: "919995999000",
   inboxEmail: process.env.NEXT_PUBLIC_INBOX_EMAIL ?? "mail@aurevialifesciences.org",
+  offices: [
+    {
+      entity: "Aurevia Life Sciences LLC",
+      region: "Dubai, UAE",
+      lines: [
+        "South Tower Dubai Science Park, Dubai - UAE",
+        "P. O Box - 231660",
+      ],
+    },
+    {
+      entity: "Aurevia Life Sciences Pvt Ltd",
+      region: "Hyderabad, India",
+      lines: [
+        "Plot No. 19/1, Sector-III, HUDA Techno Enclave,",
+        "HITEC City, Hyderabad, Telangana 500081",
+      ],
+    },
+    {
+      entity: "Aurevia Life Sciences Pvt Ltd",
+      region: "Kochi, India",
+      lines: [
+        "HIT/01-24, KINFRA Hi-Tech Park,",
+        "North Kalamassery, Kochi, Kerala 683503",
+      ],
+    },
+  ],
 };
-
-export function waLink(text?: string) {
-  const message =
-    text ?? `Hello ${company.shortName}, I would like to learn more about Aurevia Life Sciences.`;
-  return `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(message)}`;
-}
-
-export function telLink() {
-  return `tel:+${company.phoneRaw}`;
-}
 
 export type NavChild = { href: string; label: string };
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
-import { company, nav, telLink, waLink, type NavItem } from "@/data/company";
+import { company, nav, type NavItem } from "@/data/company";
 
 function Chevron({ open }: { open?: boolean }) {
   return (
@@ -64,10 +64,9 @@ export function Header() {
         </nav>
 
         <div className="utils">
-          <a className="stock" href={telLink()}>
-            {company.phone}
-          </a>
-          <span className="country">Country</span>
+          <Link className="util-contact" href="/contact">
+            Contact Us
+          </Link>
           <button
             className="icon-btn"
             aria-label="Search"
@@ -126,10 +125,6 @@ export function Header() {
             );
           })}
           <div className="m-foot">
-            <a href={telLink()}>Call {company.phone}</a>
-            <a href={waLink()} target="_blank" rel="noreferrer">
-              WhatsApp
-            </a>
             <Link href="/contact">Contact Us</Link>
           </div>
         </div>
@@ -230,11 +225,10 @@ export function Footer() {
         <div>
           <h4>Contact</h4>
           <ul>
-            <li><a href={telLink()}>Call {company.phone}</a></li>
-            <li><a href={waLink()} target="_blank" rel="noreferrer">WhatsApp</a></li>
             <li><Link href="/contact">Contact Us</Link></li>
             <li><Link href="/news">Newsroom</Link></li>
             <li><Link href="/investors">Investors</Link></li>
+            <li><a href={`mailto:${company.inboxEmail}`}>{company.inboxEmail}</a></li>
           </ul>
         </div>
       </div>
@@ -253,16 +247,5 @@ export function Footer() {
         <p>© {new Date().getFullYear()} {company.legalName}. All rights reserved.</p>
       </div>
     </footer>
-  );
-}
-
-export function WhatsAppFloat() {
-  return (
-    <a className="wa-float" href={waLink()} target="_blank" rel="noreferrer">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M20 3.9A10 10 0 0 0 3.3 17.6L2 22l4.5-1.2A10 10 0 0 0 12 22a10 10 0 0 0 8-18.1zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.7.7.7-2.6-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5.1a6.6 6.6 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.6c-.1-.3 0-.4.1-.5l.4-.4.2-.3a.4.4 0 0 0 0-.4c0-.1-.5-1.3-.7-1.8s-.4-.4-.5-.4h-.4a.8.8 0 0 0-.6.3 2.5 2.5 0 0 0-.8 1.9 4.3 4.3 0 0 0 .9 2.3 9.9 9.9 0 0 0 3.8 3.4 12.7 12.7 0 0 0 1.3.5 3.1 3.1 0 0 0 1.4.1 2.4 2.4 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c-.1-.1-.2-.1-.4-.2z" />
-      </svg>
-      <span>WhatsApp</span>
-    </a>
   );
 }

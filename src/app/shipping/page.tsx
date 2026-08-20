@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { company, telLink } from "@/data/company";
+import Link from "next/link";
+import { company } from "@/data/company";
 
 export const metadata: Metadata = { title: "Supply & Access" };
 
@@ -13,7 +14,8 @@ export default function ShippingPage() {
           professionals, authorised channels and partners — not through an online shop on this site.
         </p>
         <p>
-          Professional and distribution enquiries: call <a href={telLink()}>{company.phone}</a>.
+          Professional and distribution enquiries: use our{" "}
+          <Link href="/contact">contact form</Link>.
         </p>
       </div>
     </section>

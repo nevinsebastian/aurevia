@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { EnquiryForm } from "@/components/EnquiryForm";
-import { company, telLink, waLink } from "@/data/company";
+import { company } from "@/data/company";
 
 export const metadata: Metadata = { title: "Contact Us" };
 
@@ -11,47 +11,37 @@ export default function ContactPage() {
         <p className="kicker">Contact</p>
         <h1>Contact Us</h1>
         <p className="lead">
-          To learn more about our company, call or message us. For general medical questions about a
-          specific condition, please consult your healthcare provider.
+          Send an enquiry using the form below. For general medical questions about a specific
+          condition, please consult your healthcare provider.
         </p>
-        <div className="grid-2" style={{ marginTop: 28 }}>
-          <a className="card" href={telLink()}>
-            <p className="kicker">Call</p>
-            <h2>{company.phone}</h2>
-            <p className="muted">Speak with the Aurevia team.</p>
-          </a>
-          <a className="card" href={waLink()} target="_blank" rel="noreferrer">
-            <p className="kicker">WhatsApp</p>
-            <h2>{company.phone}</h2>
-            <p className="muted">News, careers, science and partnership enquiries.</p>
-          </a>
-        </div>
-        <div className="grid-3" style={{ marginTop: 18 }}>
-          {[
-            ["Product information", "Ask about our specialty, generic and wellness portfolio."],
-            ["News and media", "Press and story enquiries."],
-            ["Working at Aurevia", "Careers and collaboration."],
-          ].map(([title, text]) => (
-            <a
-              className="card"
-              key={title}
-              href={waLink(`Hello Aurevia, ${title}: ${text}`)}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3>{title}</h3>
-              <p className="muted">{text}</p>
-            </a>
-          ))}
-        </div>
-        <div className="enquiry-wrap">
-          <p className="kicker">Send an enquiry</p>
-          <h2>Email us from this page</h2>
-          <p className="muted" style={{ margin: "8px 0 18px", maxWidth: "52ch" }}>
-            Enter your email and message. It is delivered to our inbox. Call or WhatsApp if you
-            prefer.
-          </p>
-          <EnquiryForm />
+
+        <div className="contact-layout">
+          <div className="enquiry-wrap">
+            <p className="kicker">Send an enquiry</p>
+            <h2>Email us from this page</h2>
+            <p className="muted form-intro">
+              Enter your name, email and message. It is delivered to {company.inboxEmail}.
+            </p>
+            <EnquiryForm />
+          </div>
+
+          <div>
+            <p className="kicker">Our offices</p>
+            <h2>Where to find us</h2>
+            <div className="office-grid">
+              {company.offices.map((office) => (
+                <article className="card office-card" key={`${office.entity}-${office.region}`}>
+                  <p className="kicker">{office.region}</p>
+                  <h3>{office.entity}</h3>
+                  {office.lines.map((line) => (
+                    <p className="muted" key={line}>
+                      {line}
+                    </p>
+                  ))}
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

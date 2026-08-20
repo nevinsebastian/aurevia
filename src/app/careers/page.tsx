@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { company, telLink, waLink } from "@/data/company";
+import Link from "next/link";
 
 export const metadata: Metadata = { title: "Careers" };
 
@@ -19,14 +19,9 @@ export default function CareersPage() {
             We hire across medical affairs, R&D coordination, quality, commercial partnerships and
             operations. Ask our team about current openings.
           </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 22 }}>
-            <a className="btn btn-primary" href={telLink()}>
-              Call {company.phone}
-            </a>
-            <a className="btn btn-ghost-dark" href={waLink("Hello Aurevia, I would like to enquire about careers.")} target="_blank" rel="noreferrer">
-              WhatsApp careers
-            </a>
-          </div>
+          <Link className="btn btn-primary" href="/contact" style={{ marginTop: 22 }}>
+            Contact us about careers
+          </Link>
         </div>
         <div className="media">
           {/* eslint-disable-next-line @next/next/no-img-element */}

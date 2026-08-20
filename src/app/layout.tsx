@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { Footer, Header, WhatsAppFloat } from "@/components/Header";
+import { Footer, Header } from "@/components/Header";
 import { company } from "@/data/company";
 import "./globals.css";
 
@@ -48,7 +48,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
-        <WhatsAppFloat />
       </body>
     </html>
   );

@@ -44,7 +44,7 @@ export default function SolutionsPage() {
           <h2>Medicine safety and you</h2>
           <p className="lead">
             Become a well-informed patient. Read the current label, store medicines as directed, and
-            report side effects to your clinician. For product information, call or WhatsApp Aurevia.
+            report side effects to your clinician. For product information, use our contact form.
           </p>
           <Link className="btn btn-primary" href="/contact" style={{ marginTop: 18 }}>
             Contact us

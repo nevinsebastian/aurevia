@@ -69,7 +69,7 @@ export function EnquiryForm() {
       setStatus("sent");
     } catch {
       setStatus("error");
-      setError("Could not send just now. Please try WhatsApp or call us.");
+      setError("Could not send just now. Please try again in a moment.");
     }
   }
 

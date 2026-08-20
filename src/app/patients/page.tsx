@@ -28,7 +28,7 @@ export default function PatientsPage() {
           </Link>
           <Link className="card" href="/contact">
             <h3>Talk to us</h3>
-            <p className="muted">Call or WhatsApp for general company information. For medical advice, see your clinician.</p>
+            <p className="muted">Use the contact form for general company information. For medical advice, see your clinician.</p>
           </Link>
         </div>
         <div className="wrap" style={{ marginTop: 40 }}>
