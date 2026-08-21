@@ -247,7 +247,7 @@ export function Footer() {
           {" · "}
           <Link href="/disclaimer">Medical Disclaimer</Link>
         </p>
-        <p>© {new Date().getFullYear()} {company.legalName}. All rights reserved.</p>
+        <p>© {company.legalName}. All rights reserved.</p>
       </div>
     </footer>
   );

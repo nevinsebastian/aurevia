@@ -1,7 +1,7 @@
 export const news = [
   {
     slug: "urology-pipeline-priority",
-    date: "19 August 2026",
+    date: "19 August",
     kicker: "Science",
     title: "Aurevia advances a first-wave urology programme for patients with unmet need",
     excerpt:
@@ -14,9 +14,9 @@ export const news = [
   },
   {
     slug: "pivot-to-growth",
-    date: "29 July 2026",
+    date: "29 July",
     kicker: "Company",
-    title: "Aurevia in 2026: building sustainable, innovation-driven growth",
+    title: "Building sustainable, innovation-driven growth",
     excerpt:
       "We are stepping up innovation in specialty care while keeping generics, nutraceuticals and Ayurvedic wellness accessible.",
     body: [
@@ -27,7 +27,7 @@ export const news = [
   },
   {
     slug: "healthy-future-report",
-    date: "30 April 2026",
+    date: "30 April",
     kicker: "Sustainability",
     title: "Healthy Future: creating the future we want to see",
     excerpt:
@@ -40,7 +40,7 @@ export const news = [
   },
   {
     slug: "neuroscience-chapter",
-    date: "30 April 2026",
+    date: "30 April",
     kicker: "Science",
     title: "Driving the next chapter of neuroscience — and urology",
     excerpt:
@@ -66,7 +66,7 @@ export const pipeline = [
 
 export const stories = [
   {
-    title: "Aurevia in 2026: our transformation at a glance",
+    title: "Our transformation at a glance",
     href: "/news/pivot-to-growth",
   },
   {
